@@ -96,5 +96,7 @@ jobs:
             Create new rules and lists: ${{ steps.create_new_lists.outcome }}
             Link: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}      
 
-      - name: Keep workflow alive
-        uses: gautamkrishnar/keepalive-workflow@v1
+      - name: Keepalive Workflow
+        uses: gautamkrishnar/keepalive-workflow@1.2.2
+            
+  
