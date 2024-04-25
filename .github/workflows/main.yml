@@ -98,7 +98,10 @@ jobs:
             Create new rules and lists: ${{ steps.create_new_lists.outcome }}
             Link: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}      
 
-      - name: Keepalive Workflow
-        uses: gautamkrishnar/keepalive-workflow@1.2.2
-            
-  
+  keepalive:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gautamkrishnar/keepalive-workflow@v2
