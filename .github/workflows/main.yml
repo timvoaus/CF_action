@@ -98,7 +98,8 @@ jobs:
             Create new rules and lists: ${{ steps.create_new_lists.outcome }}
             Link: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}      
 
-  keepalive:
+  keepalive-job:
+    name: Keepalive Workflow
     runs-on: ubuntu-latest
     permissions:
       actions: write
